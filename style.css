@@ -196,6 +196,11 @@ main {
   margin: 0 auto;
 }
 
+.subscription-form {
+  text-align: center;
+  margin: 1rem 0 1.5rem;
+}
+
 .timeline-overview {
   background: #ffffff;
   border-radius: 28px;
@@ -237,6 +242,7 @@ main {
     display: none;
   }
 }
+
 
 .timeline-step {
   position: relative;
@@ -405,6 +411,69 @@ main {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
+}
+
+.timeline-instructions {
+  text-align: center;
+  margin: 1rem 0 1.5rem;
+}
+
+.three-column-section {
+  margin-top: 2rem;
+  padding: 0.5rem 0 0;
+}
+
+.three-column-content {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.three-column-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
+  border: 1px solid rgba(13, 88, 255, 0.12);
+  border-radius: 0;
+  padding: 1.4rem;
+  box-shadow: 0 10px 24px rgba(15, 45, 90, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.three-column-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 22px 42px rgba(15, 45, 90, 0.12), 0 8px 18px rgba(13, 88, 255, 0.08);
+}
+
+.three-column-card h2 {
+  margin-top: 0;
+  margin-bottom: 0.7rem;
+  color: #081f48;
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+}
+
+.three-column-card p {
+  margin: 0 0 0.9rem;
+  color: #4f5f79;
+  line-height: 1.65;
+}
+
+.three-column-card a {
+  display: inline-block;
+  margin-top: 0.25rem;
+  color: #0071c5;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.three-column-card a:hover,
+.three-column-card a:focus-visible {
+  color: #0058a3;
+}
+
+@media (max-width: 800px) {
+  .three-column-content {
+    grid-template-columns: 1fr;
+  }
 }
 
 .timeline-card .timeline-card-details p {
