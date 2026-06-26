@@ -4,29 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intel: Sustainability Through the Ages</title>
-  <link rel="stylesheet" href="style.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="d-flex flex-column">
   <header class="page-header">
-    <div class="top-bar">
-      <div class="top-bar-inner">
+    <div class="top-bar navbar navbar-expand-md">
+      <div class="top-bar-inner container-xl">
         <img class="logo" src="img/intel-header-logo.svg" alt="Intel Logo" />
-        <nav class="site-nav" aria-label="Primary navigation">
+        <nav class="site-nav navbar-nav ms-auto" aria-label="Primary navigation">
           
         </nav>
       </div>
     </div>
 
-    <div class="hero">
+    <div class="hero d-flex align-items-center">
       <div class="hero-copy">
-        <h1>Intel's Sustainability Through The Ages</h1>
+        <h1 class="display-5 fw-bold">Intel's Sustainability Through The Ages</h1>
         <p>
           Explore Intel's journey through time, discovering how our commitment
           to innovation has shaped a more sustainable future for technology
           and our planet.
         </p>
-        <a class="hero-button" href="#timeline">Explore the timeline</a>
+        <a class="hero-button btn btn-primary" href="#timeline">Explore the timeline</a>
       </div>
 
       <div class="hero-media">
@@ -35,31 +35,31 @@
     </div>
   </header>
 
-  <main>
+  <main class="container-xl px-3 pb-5">
     <section class="timeline-overview" id="timeline">
-      <h2>Our sustainability journey</h2>
-      <div class="timeline-track" role="tablist" aria-label="Timeline navigation">
-        <div class="timeline-step" role="tab" tabindex="-1" aria-selected="false" data-year="1970">
+      <h2 class="fw-semibold">Our sustainability journey</h2>
+      <div class="timeline-track row row-cols-2 row-cols-md-3 row-cols-lg-6 g-3" role="tablist" aria-label="Timeline navigation">
+        <div class="timeline-step col" role="tab" tabindex="-1" aria-selected="false" data-year="1970">
           <span>1970s</span>
           <p>Our foundations</p>
         </div>
-        <div class="timeline-step" role="tab" tabindex="-1" aria-selected="false" data-year="1980">
+        <div class="timeline-step col" role="tab" tabindex="-1" aria-selected="false" data-year="1980">
           <span>1980s</span>
           <p>Building programs</p>
         </div>
-        <div class="timeline-step" role="tab" tabindex="-1" aria-selected="false" data-year="1990">
+        <div class="timeline-step col" role="tab" tabindex="-1" aria-selected="false" data-year="1990">
           <span>1990s</span>
           <p>Global commitment</p>
         </div>
-        <div class="timeline-step" role="tab" tabindex="-1" aria-selected="false" data-year="2000">
+        <div class="timeline-step col" role="tab" tabindex="-1" aria-selected="false" data-year="2000">
           <span>2000s</span>
           <p>Scaling impact</p>
         </div>
-        <div class="timeline-step" role="tab" tabindex="-1" aria-selected="false" data-year="2010">
+        <div class="timeline-step col" role="tab" tabindex="-1" aria-selected="false" data-year="2010">
           <span>2010s</span>
           <p>Innovating responsibly</p>
         </div>
-        <div class="timeline-step active" role="tab" tabindex="0" aria-selected="true" data-year="2020">
+        <div class="timeline-step col active" role="tab" tabindex="0" aria-selected="true" data-year="2020">
           <span>2020s+</span>
           <p>Shaping the future</p>
         </div>
@@ -67,9 +67,9 @@
     </section>
 
     <section class="timeline-cards">
-      <article class="timeline-card" tabindex="0">
+      <article class="timeline-card card border-0" tabindex="0">
         <p class="card-year">1968</p>
-        <h3>Intel Founded</h3>
+        <h3 class="h5">Intel Founded</h3>
         <div class="timeline-card-media">
           <img class="timeline-image" src="img/1968.png" alt="Black-and-white composite image showing two men in business suits standing beside an Intel Corporation sign outside an office building. The men face the camera, and the scene has a mid-20th-century corporate portrait style." />
           </div>
@@ -82,9 +82,9 @@
           </div>
       </article>
 
-      <article class="timeline-card" tabindex="0">
+      <article class="timeline-card card border-0" tabindex="0">
         <p class="card-year">1971</p>
-        <h3>First Microprocessor</h3>
+        <h3 class="h5">First Microprocessor</h3>
         <div class="timeline-card-media">
           <img class="timeline-image" src="img/1971.jpg" alt="Close-up black-and-white image of an Intel 4004 microprocessor mounted on a circuit board. Fine electronic traces radiate outward from the square chip, emphasizing its central position." />
           </div>
@@ -97,9 +97,9 @@
           </div>
       </article>
 
-      <article class="timeline-card" tabindex="0">
+      <article class="timeline-card card border-0" tabindex="0">
         <p class="card-year">1978</p>
-        <h3>8086 Processor</h3>
+        <h3 class="h5">8086 Processor</h3>
         <div class="timeline-card-media">
           <img class="timeline-image" src="img/1978.jpg" alt="Black-and-white close-up of a microchip labeled ‘8086’ mounted on a densely patterned circuit board. The large numerals stand out against the intricate network of electronic traces." />
           </div>
@@ -111,9 +111,9 @@
           </div>
       </article>
 
-      <article class="timeline-card" tabindex="0">
+      <article class="timeline-card card border-0" tabindex="0">
         <p class="card-year">1985</p>
-        <h3>386 Processor</h3>
+        <h3 class="h5">386 Processor</h3>
         <div class="timeline-card-media">
           <img class="timeline-image" src="img/1985.jpg" alt="Close-up of an Intel-branded microchip mounted on a circuit board, with intricate silver electronic traces radiating outward across a dark background." />
           </div>
@@ -126,9 +126,9 @@
           </div>
       </article>
 
-      <article class="timeline-card" tabindex="0">
+      <article class="timeline-card card border-0" tabindex="0">
         <p class="card-year">2006</p>
-        <h3>Peak GHG Emissions</h3>
+        <h3 class="h5">Peak GHG Emissions</h3>
         <div class="timeline-card-media">
           <img class="timeline-image" src="img/2006.png" alt="Large Intel semiconductor manufacturing facility at sunset, with three smokestacks emitting thick plumes of vapor or smoke. Solar panels and a wind turbine are visible in the surrounding landscape." />
           </div>
@@ -142,9 +142,9 @@
           </div>
       </article>
 
-      <article class="timeline-card" tabindex="0">
+      <article class="timeline-card card border-0" tabindex="0">
         <p class="card-year">2020</p>
-        <h3>RISE Strategy</h3>
+        <h3 class="h5">RISE Strategy</h3>
         <div class="timeline-card-media">
           <img class="timeline-image" src="img/2020.png" alt="Intel campus entrance featuring a large company sign reading “Our commitment. A better future.” Surrounded by landscaped greenery, solar-panel carports, and wind turbines under a clear blue sky." />
           </div>
@@ -157,9 +157,9 @@
           </div>
       </article>
 
-      <article class="timeline-card" tabindex="0">
+      <article class="timeline-card card border-0" tabindex="0">
         <p class="card-year">2022</p>
-        <h3>Net-Zero By 2040</h3>
+        <h3 class="h5">Net-Zero By 2040</h3>
         <div class="timeline-card-media">
           <img class="timeline-image" src="img/2022.png" alt="A stone path winds through green hills at sunset with the Intel logo overlaid in the sky." />
           </div>
@@ -172,9 +172,9 @@
           </div>
       </article>
 
-      <article class="timeline-card" tabindex="0">
+      <article class="timeline-card card border-0" tabindex="0">
         <p class="card-year">2023</p>
-        <h3>Renewable Electricity</h3>
+        <h3 class="h5">Renewable Electricity</h3>
         <div class="timeline-card-media">
           <img class="timeline-image" src="img/2023.png" alt="Solar panels stretch across the foreground outside an Intel facility, with three large wind turbines rising behind the building under a bright blue sky, illustrating the use of renewable energy and sustainable technology." />
           </div>
@@ -187,9 +187,9 @@
           </div>
       </article>
 
-      <article class="timeline-card" tabindex="0">
+      <article class="timeline-card card border-0" tabindex="0">
         <p class="card-year">2024</p>
-        <h3>Sustainability Summit</h3>
+        <h3 class="h5">Sustainability Summit</h3>
         <div class="timeline-card-media">
           <img class="timeline-image" src="img/2024.png" alt="A panel discussion at an Intel Sustainability Summit. Four speakers sit on stage in front of a large blue Intel Sustainability Summit backdrop featuring a green leaf and globe graphic, while an audience listens from rows of seats surrounded by green living walls." />
           </div>
@@ -202,28 +202,31 @@
           </div>
       </article>
     </section>
-    <section class="timeline-instructions">
+    <section class="timeline-instructions text-center small text-muted my-3">
       <p>Scroll to view timeline | Hover over cards to learn more!</p>
     </section>
     <!-- 3-Column Content Section -->
-  <section class="three-column-section">
-    <div class="three-column-content">
+  <section class="three-column-section mt-4 py-2">
+    <div class="three-column-content row g-4 mx-0">
       
       <!-- Column 1 -->
-      <div class="three-column-card">
-        <h2>RISE Strategy</h2>
+      <div class="col-12 col-md-6 col-lg-4">
+      <div class="three-column-card card h-100 border-0">
+        <h2 class="h4">RISE Strategy</h2>
         <p>
           Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy, 
           Intel sets ambitious 2030 goals, including driving industry-wide 
           progress on climate action, water stewardship, and waste reduction.
         </p>
         <!-- Learn More Button -->
-        <a href="#">Learn More</a>
+        <a class="btn btn-link px-0" href="#">Learn More</a>
+      </div>
       </div>
 
       <!-- Column 2 -->
-      <div class="three-column-card">
-        <h2>Commitment</h2>
+      <div class="col-12 col-md-6 col-lg-4">
+      <div class="three-column-card card h-100 border-0">
+        <h2 class="h4">Commitment</h2>
         <p>
           In 2022, Intel pledged to achieve net-zero greenhouse gas emissions 
           (Scope 1 and 2) by 2040. This commitment builds on decades of 
@@ -231,12 +234,14 @@
           industry.
         </p>
         <!-- Learn More Button -->
-        <a href="#">Learn More</a>
+        <a class="btn btn-link px-0" href="#">Learn More</a>
+      </div>
       </div>
 
       <!-- Column 3 -->
-      <div class="three-column-card">
-        <h2>Water &amp; Waste</h2>
+      <div class="col-12 col-md-6 col-lg-4">
+      <div class="three-column-card card h-100 border-0">
+        <h2 class="h4">Water &amp; Waste</h2>
         <p>
           Intel conserves billions of gallons of water annually and 
           collaborates with local communities to restore watersheds.
@@ -244,20 +249,33 @@
           advance a circular economy.
         </p>
         <!-- Learn More Button -->
-        <a href="#">Learn More</a>
+        <a class="btn btn-link px-0" href="#">Learn More</a>
+      </div>
       </div>
 
     </div>
   </section>
 
   <!-- Subscription Form -->
-  <section class="subscription-form">
-    <h2>Subscribe to our Newsletter</h2>
+  <section class="subscription-form text-center my-3 py-2">
+    <h2 class="h3">Subscribe to our Newsletter</h2>
     <!-- Add form here -->
+     <form class="row row-cols-lg-auto g-3 justify-content-center align-items-center">
+  <div class="col-12">
+    <label class="visually-hidden" for="inlineFormInputGroupUsername">Username</label>
+    <div class="input-group">
+      <input type="email" class="form-control" id="inlineFormInputGroupUsername" placeholder="Email" aria-label="Email address">
+    </div>
+  </div>
+
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary px-4">Submit</button>
+  </div>
+</form>
   </section>
 
-    <footer class="page-footer">
-      <h2>CopyRight @</h2>
+    <footer class="page-footer text-center text-secondary my-4 py-3" role="contentinfo">
+      <p class="mb-0">&copy; 2026 Intel Corporation. All rights reserved.</p>
     </footer>
 
     

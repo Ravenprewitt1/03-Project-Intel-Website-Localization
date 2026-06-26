@@ -43,8 +43,6 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  max-width: 1180px;
-  margin: 0 auto;
   padding: 1rem 1.5rem;
 }
 
@@ -190,17 +188,6 @@ a {
   object-position: right center;
 }
 
-main {
-  padding: 0 1.5rem 3rem;
-  max-width: 1180px;
-  margin: 0 auto;
-}
-
-.subscription-form {
-  text-align: center;
-  margin: 1rem 0 1.5rem;
-}
-
 .timeline-overview {
   background: #ffffff;
   border-radius: 28px;
@@ -218,11 +205,7 @@ main {
 
 .timeline-track {
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 1rem;
   align-items: flex-start;
-  justify-items: center;
   padding: 0 0 0.5rem;
 }
 
@@ -413,23 +396,12 @@ main {
   pointer-events: auto;
 }
 
-.timeline-instructions {
-  text-align: center;
-  margin: 1rem 0 1.5rem;
-}
 
-.three-column-section {
-  margin-top: 2rem;
-  padding: 0.5rem 0 0;
-}
-
-.three-column-content {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.25rem;
-}
 
 .three-column-card {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
   background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
   border: 1px solid rgba(13, 88, 255, 0.12);
   border-radius: 0;
@@ -454,13 +426,16 @@ main {
 .three-column-card p {
   margin: 0 0 0.9rem;
   color: #4f5f79;
+  font-size: 1rem;
   line-height: 1.65;
 }
 
 .three-column-card a {
   display: inline-block;
-  margin-top: 0.25rem;
+  margin-top: auto;
+  padding-top: 0.25rem;
   color: #0071c5;
+  font-size: 1rem;
   font-weight: 700;
   text-decoration: none;
 }
@@ -468,12 +443,6 @@ main {
 .three-column-card a:hover,
 .three-column-card a:focus-visible {
   color: #0058a3;
-}
-
-@media (max-width: 800px) {
-  .three-column-content {
-    grid-template-columns: 1fr;
-  }
 }
 
 .timeline-card .timeline-card-details p {
@@ -551,20 +520,12 @@ main {
 }
 
 .page-footer {
-  text-align: center;
-  margin: 2rem 0 1rem;
-  padding: 1rem 0;
-  color: #5e6d8b;
   clear: both;
 }
 
 @media (max-width: 860px) {
   .hero {
-    grid-template-columns: 1fr;
-  }
-
-  .timeline-track {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    min-height: 180px;
   }
 }
 
@@ -766,10 +727,6 @@ main {
     border-radius: 6px;
   }
 
-  main {
-    padding: 0 1rem 2rem;
-  }
-
   .timeline-overview {
     padding: 1rem 1.25rem;
     margin-bottom: 1.5rem;
@@ -782,8 +739,6 @@ main {
   }
 
   .timeline-track {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.75rem;
     padding: 0;
   }
 
@@ -900,10 +855,6 @@ main {
     border-radius: 4px;
   }
 
-  main {
-    padding: 0 0.75rem 1.5rem;
-  }
-
   .timeline-overview {
     padding: 0.75rem 0.9rem;
     margin-bottom: 1.25rem;
@@ -916,8 +867,6 @@ main {
   }
 
   .timeline-track {
-    grid-template-columns: 1fr;
-    gap: 0.4rem;
     padding: 0;
   }
 
