@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intel: Sustainability Through the Ages</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="d-flex flex-column">
@@ -203,7 +204,7 @@
       </article>
     </section>
     <section class="timeline-instructions text-center small text-muted my-3">
-      <p>Scroll to view timeline | Hover over cards to learn more!</p>
+      <p>Scroll to view timeline | Hover over cards to learn more</p>
     </section>
     <!-- 3-Column Content Section -->
   <section class="three-column-section mt-4 py-2">
@@ -212,21 +213,21 @@
       <!-- Column 1 -->
       <div class="col-12 col-md-6 col-lg-4">
       <div class="three-column-card card h-100 border-0">
-        <h2 class="h4">RISE Strategy</h2>
+        <h2 class="h4"><i class="bi bi-graph-up-arrow heading-icon" aria-hidden="true"></i><span class="heading-text">RISE Strategy</span></h2>
         <p>
           Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy, 
           Intel sets ambitious 2030 goals, including driving industry-wide 
           progress on climate action, water stewardship, and waste reduction.
         </p>
         <!-- Learn More Button -->
-        <a class="btn btn-link px-0" href="#">Learn More</a>
+        <a class="btn learn-more-btn" href="#">Learn More</a>
       </div>
       </div>
 
       <!-- Column 2 -->
       <div class="col-12 col-md-6 col-lg-4">
       <div class="three-column-card card h-100 border-0">
-        <h2 class="h4">Commitment</h2>
+        <h2 class="h4"><i class="bi bi-bullseye heading-icon" aria-hidden="true"></i><span class="heading-text">Commitment</span></h2>
         <p>
           In 2022, Intel pledged to achieve net-zero greenhouse gas emissions 
           (Scope 1 and 2) by 2040. This commitment builds on decades of 
@@ -234,14 +235,14 @@
           industry.
         </p>
         <!-- Learn More Button -->
-        <a class="btn btn-link px-0" href="#">Learn More</a>
+        <a class="btn learn-more-btn" href="#">Learn More</a>
       </div>
       </div>
 
       <!-- Column 3 -->
       <div class="col-12 col-md-6 col-lg-4">
       <div class="three-column-card card h-100 border-0">
-        <h2 class="h4">Water &amp; Waste</h2>
+        <h2 class="h4"><i class="bi bi-droplet-half heading-icon" aria-hidden="true"></i><span class="heading-text">Water &amp; Waste</span></h2>
         <p>
           Intel conserves billions of gallons of water annually and 
           collaborates with local communities to restore watersheds.
@@ -249,7 +250,7 @@
           advance a circular economy.
         </p>
         <!-- Learn More Button -->
-        <a class="btn btn-link px-0" href="#">Learn More</a>
+        <a class="btn learn-more-btn" href="#">Learn More</a>
       </div>
       </div>
 
@@ -283,6 +284,201 @@
   <script>
     // Interactive timeline: improved activation so clicked steps show active dot
     (function(){
+      // Auto locale: detect browser language and switch text + direction.
+      const TRANSLATIONS = {
+        en: {
+          pageTitle: "Intel: Sustainability Through the Ages",
+          heroTitle: "Intel's Sustainability Through The Ages",
+          heroText: "Explore Intel's journey through time, discovering how our commitment to innovation has shaped a more sustainable future for technology and our planet.",
+          heroButton: "Explore the timeline",
+          timelineHeading: "Our sustainability journey",
+          timelineAria: "Timeline navigation",
+          stepYears: ["1970s", "1980s", "1990s", "2000s", "2010s", "2020s+"],
+          stepLabels: [
+            "Our foundations",
+            "Building programs",
+            "Global commitment",
+            "Scaling impact",
+            "Innovating responsibly",
+            "Shaping the future"
+          ],
+          cardTitles: [
+            "Intel Founded",
+            "First Microprocessor",
+            "8086 Processor",
+            "386 Processor",
+            "Peak GHG Emissions",
+            "RISE Strategy",
+            "Net-Zero By 2040",
+            "Renewable Electricity",
+            "Sustainability Summit"
+          ],
+          cardDetails: [
+            "Robert Noyce and Gordon Moore rename the newly formed company NM Electronics to Intel Corporation, laying the foundation for decades of technological innovation.",
+            "Intel debuts the 4004, the world's first commercial microprocessor, igniting the microprocessor revolution and propelling the future of computing devices.",
+            "Launch of the 8086 processor, establishing the x86 architecture that drives countless PCs and servers in the modern era.",
+            "Intel introduces the 386 processor with 32-bit architecture, ushering in a new era of performance and multitasking for personal computers.",
+            "This year marks Intel's highest annual greenhouse gas emissions for operations. Over subsequent years, Intel invests heavily in chemical abatement, renewable energy, and energy-efficient manufacturing to reverse this trend.",
+            "Intel launches its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy and 2030 goals, aiming to drive industry-wide progress on climate action, water stewardship, and waste reduction.",
+            "Intel announces its commitment to achieve net-zero greenhouse gas emissions (Scope 1 and 2) across its global operations by 2040, building on years of environmental initiatives.",
+            "The company achieves 99% renewable electricity usage worldwide, helping to drastically lower carbon emissions and driving progress toward Intel's long-term sustainability goals.",
+            "Intel hosts its first Sustainability Summit, uniting suppliers, government officials, and industry leaders to collaborate on next-generation sustainable semiconductor manufacturing."
+          ],
+          timelineHint: "Scroll to view timeline | Hover over cards to learn more",
+          colTitles: ["RISE Strategy", "Commitment", "Water & Waste"],
+          colTexts: [
+            "Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy, Intel sets ambitious 2030 goals, including driving industry-wide progress on climate action, water stewardship, and waste reduction.",
+            "In 2022, Intel pledged to achieve net-zero greenhouse gas emissions (Scope 1 and 2) by 2040. This commitment builds on decades of environmental initiatives and partnerships across the semiconductor industry.",
+            "Intel conserves billions of gallons of water annually and collaborates with local communities to restore watersheds. Intel also upcycles and recycles materials to reduce waste and advance a circular economy."
+          ],
+          learnMore: "Learn More",
+          subscribeHeading: "Subscribe to our Newsletter",
+          emailPlaceholder: "Email",
+          emailAria: "Email address",
+          submitButton: "Submit",
+          footerText: "© 2026 Intel Corporation. All rights reserved."
+        },
+        ar: {
+          pageTitle: "إنتل: الاستدامة عبر العصور",
+          heroTitle: "رحلة إنتل في الاستدامة عبر العصور",
+          heroText: "استكشف رحلة إنتل عبر الزمن، واكتشف كيف ساهم التزامنا بالابتكار في بناء مستقبل أكثر استدامة للتقنية وكوكبنا.",
+          heroButton: "استكشف الخط الزمني",
+          timelineHeading: "رحلتنا نحو الاستدامة",
+          timelineAria: "التنقل في الخط الزمني",
+          stepYears: ["السبعينيات", "الثمانينيات", "التسعينيات", "الألفينات", "العقد 2010", "2020 وما بعده"],
+          stepLabels: [
+            "أسسنا الأولى",
+            "بناء البرامج",
+            "التزام عالمي",
+            "توسيع الأثر",
+            "ابتكار بمسؤولية",
+            "تشكيل المستقبل"
+          ],
+          cardTitles: [
+            "تأسيس إنتل",
+            "أول معالج دقيق",
+            "معالج 8086",
+            "معالج 386",
+            "ذروة انبعاثات الغازات الدفيئة",
+            "استراتيجية RISE",
+            "صافي انبعاثات صفري بحلول 2040",
+            "كهرباء متجددة",
+            "قمة الاستدامة"
+          ],
+          cardDetails: [
+            "قام روبرت نويس وجوردون مور بإعادة تسمية الشركة الناشئة من NM Electronics إلى Intel Corporation، مما وضع الأساس لعقود من الابتكار التقني.",
+            "أطلقت إنتل المعالج 4004، وهو أول معالج دقيق تجاري في العالم، مما أشعل ثورة المعالجات الدقيقة ودفع مستقبل أجهزة الحوسبة.",
+            "إطلاق معالج 8086 الذي رسّخ بنية x86 والتي تشغّل عدداً هائلاً من أجهزة الكمبيوتر والخوادم الحديثة.",
+            "قدّمت إنتل معالج 386 ببنية 32-بت، لتبدأ حقبة جديدة من الأداء وتعدد المهام في الحواسيب الشخصية.",
+            "يمثل هذا العام أعلى مستوى سنوي لانبعاثات غازات الدفيئة في عمليات إنتل. وخلال السنوات اللاحقة استثمرت الشركة بكثافة في خفض المواد الكيميائية والطاقة المتجددة وكفاءة التصنيع لعكس هذا الاتجاه.",
+            "أطلقت إنتل استراتيجية RISE (المسؤولة والشاملة والمستدامة والمُمكِّنة) وأهداف 2030 بهدف دفع تقدم على مستوى القطاع في العمل المناخي وإدارة المياه وتقليل النفايات.",
+            "أعلنت إنتل التزامها بتحقيق صافي انبعاثات صفري من غازات الدفيئة (النطاق 1 و2) عبر عملياتها العالمية بحلول عام 2040، استناداً إلى سنوات من المبادرات البيئية.",
+            "حققت الشركة نسبة 99% من استخدام الكهرباء المتجددة عالمياً، مما ساعد بشكل كبير على خفض انبعاثات الكربون ودعم التقدم نحو أهداف الاستدامة طويلة المدى لإنتل.",
+            "استضافت إنتل أول قمة للاستدامة، وجمعت الموردين والمسؤولين الحكوميين وقادة الصناعة للتعاون في تصنيع أشباه الموصلات المستدام من الجيل التالي."
+          ],
+          timelineHint: "مرّر لعرض الخط الزمني | مرّر المؤشر فوق البطاقات لمعرفة المزيد",
+          colTitles: ["استراتيجية RISE", "الالتزام", "المياه والنفايات"],
+          colTexts: [
+            "ضمن استراتيجية RISE (المسؤولة والشاملة والمستدامة والمُمكِّنة)، تحدد إنتل أهدافاً طموحة لعام 2030 تشمل دفع التقدم على مستوى القطاع في العمل المناخي وإدارة المياه وتقليل النفايات.",
+            "في عام 2022 تعهدت إنتل بتحقيق صافي انبعاثات صفري من غازات الدفيئة (النطاق 1 و2) بحلول عام 2040. ويستند هذا الالتزام إلى عقود من المبادرات البيئية والشراكات عبر قطاع أشباه الموصلات.",
+            "توفر إنتل مليارات الجالونات من المياه سنوياً وتتعاون مع المجتمعات المحلية لاستعادة الأحواض المائية. كما تعيد الشركة تدوير المواد وترفع قيمتها للحد من النفايات ودعم الاقتصاد الدائري."
+          ],
+          learnMore: "اعرف المزيد",
+          subscribeHeading: "اشترك في نشرتنا الإخبارية",
+          emailPlaceholder: "البريد الإلكتروني",
+          emailAria: "عنوان البريد الإلكتروني",
+          submitButton: "إرسال",
+          footerText: "© 2026 شركة إنتل. جميع الحقوق محفوظة."
+        }
+      };
+
+      function setText(selector, value){
+        const node = document.querySelector(selector);
+        if(node && typeof value === 'string') node.textContent = value;
+      }
+
+      function isRtlLanguage(localeTag){
+        const rtlLanguages = new Set(['ar', 'fa', 'he', 'ur', 'ps', 'ku', 'sd', 'ug', 'yi']);
+        const base = (localeTag || '').toLowerCase().split('-')[0];
+        return rtlLanguages.has(base);
+      }
+
+      function detectLocale(){
+        const params = new URLSearchParams(window.location.search);
+        const forced = (params.get('lang') || '').toLowerCase();
+        if(forced){
+          return {
+            translationKey: forced.startsWith('ar') ? 'ar' : 'en',
+            lang: forced,
+            dir: isRtlLanguage(forced) ? 'rtl' : 'ltr'
+          };
+        }
+
+        const browserLocales = (navigator.languages && navigator.languages.length)
+          ? navigator.languages
+          : [navigator.language || 'en'];
+
+        const preferred = (browserLocales[0] || 'en').toLowerCase();
+        const hasArabic = browserLocales.some(l => (l || '').toLowerCase().startsWith('ar'));
+
+        return {
+          translationKey: hasArabic ? 'ar' : 'en',
+          lang: preferred,
+          dir: isRtlLanguage(preferred) ? 'rtl' : 'ltr'
+        };
+      }
+
+      function applyLocale(localeConfig){
+        const t = TRANSLATIONS[localeConfig.translationKey] || TRANSLATIONS.en;
+        const root = document.documentElement;
+
+        root.lang = localeConfig.lang || 'en';
+        root.dir = localeConfig.dir || 'ltr';
+        document.title = t.pageTitle;
+
+        setText('.hero-copy h1', t.heroTitle);
+        setText('.hero-copy p', t.heroText);
+        setText('.hero-button', t.heroButton);
+        setText('.timeline-overview h2', t.timelineHeading);
+
+        const timelineTrack = document.querySelector('.timeline-track');
+        if(timelineTrack) timelineTrack.setAttribute('aria-label', t.timelineAria);
+
+        const stepSpans = document.querySelectorAll('.timeline-step span');
+        const stepLabels = document.querySelectorAll('.timeline-step p');
+        t.stepYears.forEach((text, i) => { if(stepSpans[i]) stepSpans[i].textContent = text; });
+        t.stepLabels.forEach((text, i) => { if(stepLabels[i]) stepLabels[i].textContent = text; });
+
+        const cardTitles = document.querySelectorAll('.timeline-card h3');
+        const cardDetails = document.querySelectorAll('.timeline-card-details p');
+        t.cardTitles.forEach((text, i) => { if(cardTitles[i]) cardTitles[i].textContent = text; });
+        t.cardDetails.forEach((text, i) => { if(cardDetails[i]) cardDetails[i].textContent = text; });
+
+        setText('.timeline-instructions p', t.timelineHint);
+
+        const colTitles = document.querySelectorAll('.three-column-card .heading-text');
+        const colTexts = document.querySelectorAll('.three-column-card p');
+        const learnMoreLinks = document.querySelectorAll('.three-column-card a');
+        t.colTitles.forEach((text, i) => { if(colTitles[i]) colTitles[i].textContent = text; });
+        t.colTexts.forEach((text, i) => { if(colTexts[i]) colTexts[i].textContent = text; });
+        learnMoreLinks.forEach(link => { link.textContent = t.learnMore; });
+
+        setText('.subscription-form h2', t.subscribeHeading);
+        const emailInput = document.getElementById('inlineFormInputGroupUsername');
+        if(emailInput){
+          emailInput.placeholder = t.emailPlaceholder;
+          emailInput.setAttribute('aria-label', t.emailAria);
+        }
+
+        const submitButton = document.querySelector('.subscription-form button[type="submit"]');
+        if(submitButton) submitButton.textContent = t.submitButton;
+
+        setText('.page-footer .mb-0', t.footerText);
+      }
+
+      const localeConfig = detectLocale();
+      applyLocale(localeConfig);
+
       // announcer for screen readers
       let announcer = document.getElementById('timeline-announcer');
       if(!announcer){
@@ -390,14 +586,25 @@
         });
       });
 
-      // On scroll, pick the card nearest to the left edge and sync — unless user recently clicked a step
+      // Direction-aware reference edge so timeline sync works in both LTR and RTL.
+      function isRtlLayout(){
+        return getComputedStyle(cardsContainer).direction === 'rtl';
+      }
+
+      function getReferenceX(rect){
+        return isRtlLayout()
+          ? rect.right - rect.width * 0.18
+          : rect.left + rect.width * 0.18;
+      }
+
+      // On scroll, pick the card nearest to the inline-start edge and sync.
       let scrollTimeout = null;
       cardsContainer.addEventListener('scroll', () => {
         if(scrollTimeout) clearTimeout(scrollTimeout);
         scrollTimeout = setTimeout(() => {
           if(Date.now() - lastManualActivation < 800) return; // ignore immediate scroll after manual activation
           const rect = cardsContainer.getBoundingClientRect();
-          const referenceX = rect.left + rect.width * 0.18;
+          const referenceX = getReferenceX(rect);
           let best = cards[0]; let bestDist = Infinity;
           cards.forEach(c => {
             const r = c.getBoundingClientRect();
@@ -412,11 +619,21 @@
       // initial sync
       setTimeout(() => {
         const rect = cardsContainer.getBoundingClientRect();
-        let firstVisible = cards.find(c => {
+        const visibleCards = cards.filter(c => {
           const r = c.getBoundingClientRect();
           return r.left < rect.right && r.right > rect.left;
-        }) || cards[0];
-        setActiveStepForCard(firstVisible);
+        });
+
+        const referenceX = getReferenceX(rect);
+        let best = visibleCards[0] || cards[0];
+        let bestDist = Infinity;
+        visibleCards.forEach(c => {
+          const r = c.getBoundingClientRect();
+          const center = r.left + r.width / 2;
+          const d = Math.abs(center - referenceX);
+          if(d < bestDist){ bestDist = d; best = c; }
+        });
+        setActiveStepForCard(best);
       }, 300);
 
       // IntersectionObserver: reveal cards and steps when entering viewport
